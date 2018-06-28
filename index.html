@@ -12,51 +12,91 @@
 		<h1 id="title">Website Survey</h1>
 		<p id="description">Tell me about your current site</p>
 		<form id="survey-form">
-			<label class="col-left" for="name" id="name-label">Name: </label>
+			<div class="row">
+				<label class="col-left" for="name" id="name-label">Name:
+				</label>
 				<input type="text" id="name" class="col-right" name="name" placeholder="Full Name" required>
-			<label class="col-left" for="email" id="email-label">Email: </label>
+			</div>
+			<div class="row">
+				<label class="col-left" for="email" id="email-label">Email:
+				</label>
 				<input type="email" id="email" name="email" class="col-right" placeholder="you@youremail.com" required>
-			<label class="col-left" for="website">URL of Your Website: </label>
+			</div>
+			<div class="row">
+				<label class="col-left" for="website">URL of Your Website:
+				</label>
 				<input type="text" name="website" id="website" class="col-right"placeholder="www.YourWebsite.com">
-			<label class="col-left" for="dropdown">How long have you been in business? </label>
-				<select id="dropdown" name="business-length" class="col-right">
-					<option value="" disabled selected>Please pick one</option>
-					<option value="0-6">Less Than 6 Months</option>
-					<option value="1">6 Months - 1 Year</option>
-					<option value="2-3">2 - 3 Years</option>
-					<option value="4-6">4 - 6 Years</option>
-					<option value="7+">7 or more years</option>
-				</select>
-				<fieldset>
-				<legend>How long have you had your website?</legend>
-					<input type="radio" name="website-age" id="full-business" value="whole">
-					<label for="full-business">Since the business started</label>
-					<input type="radio" name="website-age" id="five-years-plus" value="5+">
-					<label for="five-years-plus">5 or more years</label>
-					<input type="radio" name="website-age" id="two-five-years" value="2-5">
-					<label for="two-five-years">Between 2 - 4 years</label>
-					<input type="radio" name="website-age" id="one-year" value="1">
-					<label for="one-year">1 Year</label>
-					<input type="radio" name="website-age" id="year-less" value="0">
-					<label for="year-less">Less than a year/I don't have a site</label>
-				</fieldset>
+			</div>
+			<div class="row">
+				<label class="col-left" for="dropdown">How long have you been in business?</label>
+					<select id="dropdown" name="business-length" class="col-right">
+						<option value="" disabled selected>Please pick one</option>
+						<option value="0-6">Less Than 6 Months</option>
+						<option value="1">6 Months - 1 Year</option>
+						<option value="2-3">2 - 3 Years</option>
+						<option value="4-6">4 - 6 Years</option>
+						<option value="7+">7 or more years</option>
+					</select>
+			</div>
+			<div class="row">
+				<label for="website-age-list" class="col-left">How long have you had your website?</label>
+					<ul style="list-style: none; margin:0;" class="col-right">
+						<li>
+							<input type="radio" name="website-age" id="full-business" value="entire" class="website-age-list">
+							<label for="full-business">Since the business started
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="website-age" id="five-years-plus" class="website-age-list" value="5+">	
+							<label for="five-years-plus">5 or more years</label>
+						</li>
+						<li>
+							<input type="radio" name="website-age" id="two-five-years" class="website-age-list value="2-4">
+							<label for="two-five-years">Between 2 - 4 years</label>
+						</li>
+						<li>
+							<input type="radio" name="website-age" id="one-year" class="website-age-list" value="1">
+							<label for="one-year">1 Year</label>
+						</li>
+						<li>
+							<input type="radio" name="website-age" id="year-less" class="website-age-list" value="0">
+							<label for="year-less">Less than a year/I don't have a site</label>
+						</li>
+					</ul>
+			</div>
+			<div class="row">
 				<label class="col-left" for="number" id="number-label">Roughly, how many site visitors do you have a month?</label>
-				<input type="number" name="monthly-visitors" id="number" min="0" max="1000" placeholder="If unsure, enter 0">
-			<fieldset>
-				<legend>Where do you feel you need the most help? (<em>Check all that apply</em>)</legend>
-					<label class="col-left" for="traffic">More Traffic</label>
-					<input type="checkbox" id="traffic" value="more-traffic" name="top-concerns">
-					<label class="col-left" for="content">Better Content</label>
-					<input type="checkbox" id="content" value="better-content" name="top-concerns">
-					<label class="col-left" for="design">Better Site Design</label>
-					<input type="checkbox" id="design" value="design" name="top-concerns">
-					<label class="col-left" for="conversion">Increase Site Conversions</label>
-					<input type="checkbox" id="conversion" value="increased-conversions" name="top-concerns">
-					<label class="col-left" for="help">I don't know, I just need help!</label>
-					<input type="checkbox" id="help" name="top-concerns" value="too-lost">
-				</fieldset>
+				<input type="number" size="35" name="monthly-visitors" id="number" class="col-right" min="0" max="1000" placeholder="If unsure, enter 0">
+			</div>
+			<div class="row">
+				<label for="top-concerns" class="col-left">Where do you feel you need the most help? (<em>Check all that apply</em>)</label>
+				<ul style="list-style: none; margin:0;" class="col-right">
+					<li>
+						<input type="checkbox" id="traffic" value="more-traffic" name="top-concerns">
+						<label class="col-left" for="traffic">More Traffic</label>
+					</li>
+					<li>
+						<input type="checkbox" id="content" value="better-content" name="top-concerns">
+						<label class="col-left" for="content">Better Content</label>
+					</li>
+					<li>
+						<input type="checkbox" id="design" value="design" name="top-concerns">
+						<label class="col-left" for="design">Better Site Design</label>
+					</li>	
+					<li>
+						<input type="checkbox" id="conversion" value="increased-conversions" name="top-concerns">
+						<label class="col-left" for="conversion">Increase Site Conversions</label>
+					</li>
+					<li>
+						<input type="checkbox" id="help" name="top-concerns" value="too-lost">
+						<label class="col-left" for="help">I don't know, I just need help!</label>
+					</li>	
+				</ul>
+			</div>
+			<div class="row">
 				<label class="col-left" for="more-info">In a few words, describe your business</label>
-				<textarea id="more-info" placeholder="Tell me about your work!"></textarea>
+				<textarea rows="3" cols="45" id="more-info" placeholder="Tell me about your work!"></textarea>
+			</div>
 				<input type="submit" id="submit" value="Send Me Info!">
 			
 		</form>
