@@ -39,8 +39,8 @@
 					</select>
 			</div>
 			<div class="row">
-				<label for="website-age-list" class="col-left">How long have you had your website?</label>
-					<ul style="list-style: none; margin:0;" class="col-right">
+				<label for="website-age-list" class="col-left choice-label">How long have you had your website?</label>
+					<ul style="list-style: none; margin:0;" class="col-right" id="website-options">
 						<li>
 							<input type="radio" name="website-age" id="full-business" value="entire" class="website-age-list">
 							<label for="full-business">Since the business started
@@ -51,7 +51,7 @@
 							<label for="five-years-plus">5 or more years</label>
 						</li>
 						<li>
-							<input type="radio" name="website-age" id="two-five-years" class="website-age-list value="2-4">
+							<input type="radio" name="website-age" id="two-five-years" class="website-age-list" value="2-4">
 							<label for="two-five-years">Between 2 - 4 years</label>
 						</li>
 						<li>
@@ -69,8 +69,8 @@
 				<input type="number" size="35" name="monthly-visitors" id="number" class="col-right" min="0" max="1000" placeholder="If unsure, enter 0">
 			</div>
 			<div class="row">
-				<label for="top-concerns" class="col-left">Where do you feel you need the most help? (<em>Check all that apply</em>)</label>
-				<ul style="list-style: none; margin:0;" class="col-right">
+				<label for="top-concerns" class="col-left choice-label" id="top-concern">Where do you feel you need the most help? (<em>Check all that apply</em>)</label>
+				<ul style="list-style: none; margin:0;" class="col-right" id="concern-list">
 					<li>
 						<input type="checkbox" id="traffic" value="more-traffic" name="top-concerns">
 						<label class="col-left" for="traffic">More Traffic</label>
@@ -97,7 +97,7 @@
 				<label class="col-left" for="more-info">In a few words, describe your business</label>
 				<textarea rows="3" cols="45" id="more-info" placeholder="Tell me about your work!"></textarea>
 			</div>
-				<input type="submit" id="submit" value="Send Me Info!">
+				<input type="submit" id="submit" value="Hit the Button!">
 			
 		</form>
 	</main>

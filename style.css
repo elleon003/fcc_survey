@@ -33,13 +33,14 @@ form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size:1.5rem;
+	font-size:1.35rem;
 }
 
 .row {
 	display:flex;
 	width:100%;
 	justify-content: center;
+	margin: 10px 0;
 }
 
 .col-left {
@@ -49,16 +50,114 @@ form {
 
 .col-right {
 	width: 50%;
+	margin:0 20px;
 }
 
 ul {
 	padding:0;
 }
 
+label[for="website-age-list"] {
+	align-self: center;
+	margin-right: 10px;
+}
+
+#website-options,
+#concern-list, {
+	padding: 0 25px;
+}
+
+input[type=number] {
+	height:20px;
+}
+
+#top-concern {
+	align-self: center;
+	padding-right: 15px;
+}
+
+#more-info {
+	margin: 0 25px;
+}
+
+#submit {
+		height: 2.5rem;
+		width: 250px;
+		font-size: 1.15rem;
+}
+
+
 /*********Media Queries*********/
-@media screen only and (min-width:300px) {
+@media only screen and (max-width:450px) {
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	#description {
+		font-size: 1.65rem;
+	}
+
+	form {
+		display:flex;
+		flex-direction: column;
+	}
+
+	.row {
+		flex-direction: column;
+	}
+
+	.col-right,
+	.col-left {
+		width: 90%;
+		text-align: left;
+	}
+
+	label,
+	ul {
+		align-self:center;
+	}
+
+	input,
+	select {
+		height: 1.75rem;
+	}
+
+	::placeholder {
+		font-size: 1.05rem;
+	}
+
+	.choice-label {
+		margin-left:.75rem;
+	}
+
+	input[type=radio],
+	input[type=checkbox] {
+		height: 1.15em;
+		width: 1.5rem;
+	}
+
+	#more-info {
+		height:100px;
+	}
+
+}
+
+@media only screen and (min-width: 451px) and (max-width: 761px) {
+
+	h1 {
+		font-size: 2.3rem;
+	}
+
+	#description {
+		font-size: 1.6rem;
+	}
+
+	input[type=radio],
+	input[type=checkbox] {
+		height: 1.05em;
+		width: 1.5rem;
+	}
 
 	
-
-
 }
